@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 06</title>
+</head>
+<body>
+    <h2>TALLER DE PROGRAMACION WEB</h2>
+    <h2>PRACTICA 06</h2>
+    <h2>REALIZAR LOS SIGUIENTES EJERCICIOS EN JAVASCRIPT (16-10-2023)</h2>
+    <script>
+        //01 workTeam
+        var workTeam = [
+            {id: 1, nombre: "Augusto", email: "augusto@gmail.com", cargo: "developer", sueldo: 50000},
+            {id: 2, nombre: "Omar", email: "omar@gmail.com", cargo: "developer", sueldo: 50000},
+            {id: 3, nombre: "Christian", email: "christian@gmail.com", cargo: "ui designer", sueldo: 45000},
+            {id: 4, nombre: "Flora", email: "flora@gmail.com", cargo: "ui designer", sueldo: 45000},
+            {id: 5, nombre: "Carlos", email: "carlos@gmail.com", cargo: "content manager", sueldo: 48000},
+            {id: 6, nombre: "kevir", email: "kevir@gmail.com", cargo: "content manager", sueldo: 48000},
+            {id: 7, nombre: "Alex", email: "alex@gmail.com", cargo: "backend engineer", sueldo: 55000},
+            {id: 8, nombre: "Liz", email: "liz@gmail.com", cargo: "backend engineer", sueldo: 55000},
+            {id: 9, nombre: "Yoel", email: "yoel@gmail.com", cargo: "ux designer", sueldo: 47000},
+            {id: 10, nombre: "Marcos", email: "marcos@gmail.com", cargo: "ux designer", sueldo: 47000}
+        ];
+        var existeworkTeam = workTeam.some(function(objeto){
+            return objeto.nombre === "Rudy"
+        })
+        console.log(existeworkTeam);
+
+        // 02 
+        var encuentraCargo = workTeam.filter (function(objetos){
+            return objetos.cargo === "developer"
+        })
+            console.log(encuentraCargo);
+
+        //03 todos los datos del usuario
+        var encuentraNombre = workTeam.find(function(objeto){
+        return objeto.nombre === "Rudy"
+        })
+        console.log(encuentraNombre);
+
+        //04 
+        var numerosPares = Array.from({length: 2}, (_, i) => (i + 1) * 2);
+        // Multiplicar por 4
+        var numerosMultiplicados = numerosPares.map(numero => numero * 4);
+        console.log(numerosMultiplicados);
+         
+        //05
+        let numerosRepetidos = Array.from({length: 10},
+         () => Array.from({length: 10}, (_, i) => i + 1));
+        console.log(numerosRepetidos);
+
+    </script>
+</body>
+</html>

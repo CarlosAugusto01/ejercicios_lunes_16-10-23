@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 1</title>
+</head>
+<body>
+    <script>
+    //METODOS PARA EL RECORRIDO DE ARRAYS
+    var objetos = [
+        { nombre: "Bici", precio: 3000 },
+        {nombre: "TV", precio: 2500 },
+        {nombre: "Libro", precio: 320 },
+        {nombre: "Celular", precio: 10000 },
+        {nombre: "Laptop", precio: 20000 },
+        {nombre: "Teclado", precio: 500 },
+        {nombre: "Audifonos", precio: 200 },
+    ]
+    //METODO FILTER:
+    var objetosFiltrados = objetos.filter (function(objetos){
+        return objetos.precio <=400
+    })
+    console.log(objetosFiltrados);
+
+    //Metodo MAP:
+    var nombreObjetos = objetos.map(function(objeto){
+        return objeto.nombre
+    })
+    console.log(nombreObjetos);
+
+    //Metodo FIND
+    var encuentraObjeto = objetos.find(function(objeto){
+        return objeto.nombre === "Audifonos"
+    })
+    console.log(encuentraObjeto);
+
+    //METODO FOREACH:
+    objetos.forEach(function(objeto){
+        console.log(objeto.nombre);
+    })
+
+    //Metodo SOME: 
+    var existeObjeto = objetos.some(function(objeto){
+        return objeto.precio <=500
+    })
+    console.log(existeObjeto);
+
+    </script>
+</body>
+</html>
